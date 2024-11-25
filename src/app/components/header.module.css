@@ -1,0 +1,7 @@
+.header + * {
+  padding-inline: 50px;
+  font-size: 20px;
+  color: white;
+  padding-block: 25px;
+  background-color: blue;
+}
