@@ -2,6 +2,7 @@ import Image from "next/image";
 import { FaSearch } from "react-icons/fa";
 import styles from './header.module.css'
 import LoginPage from "./Login";
+import Cart from "./Cart";
 
 
 export default function TopHeaderTwo() {
@@ -22,6 +23,10 @@ export default function TopHeaderTwo() {
 
         <div>
           <LoginPage/>
+        </div>
+
+        <div>
+          <Cart/>
         </div>
     </div>
   )
