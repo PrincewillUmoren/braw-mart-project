@@ -27,7 +27,7 @@ export const products = [
             "Perfect for daily workouts"
         ],
         imageUrl: "/image/202.jpg",
-        rating: 4.7,
+        rating: 4.0,
         stock: 8,
         brand: "Adidas"
     },
@@ -59,7 +59,7 @@ export const products = [
             "Suitable for all-day wear"
         ],
         imageUrl: "/image/204.jpg",
-        rating: 4.6,
+        rating: 3.6,
         stock: 15,
         brand: "Ray-Ban"
     },
@@ -75,7 +75,7 @@ export const products = [
             "Available in various sizes"
         ],
         imageUrl: "/image/205.jpg",
-        rating: 4.5,
+        rating: 3.5,
         stock: 10,
         brand: "Levi's"
     },
@@ -91,7 +91,7 @@ export const products = [
             "Great for enhancing any outfit"
         ],
         imageUrl: "/image/206.jpg",
-        rating: 4.9,
+        rating: 2.5,
         stock: 6,
         brand: "Hermès"
     },
@@ -107,7 +107,7 @@ export const products = [
             "Available in a range of colors"
         ],
         imageUrl: "/image/207.jpg",
-        rating: 4.7,
+        rating: 3.7,
         stock: 20,
         brand: "Converse"
     },
@@ -123,7 +123,7 @@ export const products = [
             "Ideal for formal and casual events"
         ],
         imageUrl: "/image/208.jpg",
-        rating: 4.8,
+        rating: 4.0,
         stock: 3,
         brand: "Prada"
     },
@@ -139,7 +139,7 @@ export const products = [
             "Available in multiple colors"
         ],
         imageUrl: "/image/209.jpg",
-        rating: 4.6,
+        rating: 3.4,
         stock: 25,
         brand: "Under Armour"
     },
