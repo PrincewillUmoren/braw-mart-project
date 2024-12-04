@@ -81,7 +81,7 @@ export const products = [
     },
     {
         id: 206,
-        name: "Hermès Silk Scarf",
+        name: "Hermes Silk Scarf",
         category: "Accessories",
         price: 120000,
         description: [

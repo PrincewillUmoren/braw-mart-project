@@ -1,10 +1,12 @@
 import Image from "next/image"
-import { products } from "../components/data"
-import AddCart from "../components/AddCart"
+import { products } from "./data"
+import AddCart from "./AddCart"
+import Button from "./Button"
 import Link from "next/link"
 
-export default function ShopPage() {
-    const productDetails =  products.map(product => (
+export default function MartDetails() {
+
+    const productDetails =  products.sort((a,b) => b.price - a.price).map(product => (
         <section key={product.id} className="rounded-sm border-2 border-gray-500 flex flex-col space-y-4 items-center pb-4 text-center">
             <Link href={`/shop/${product.name.replaceAll(' ','-')}`}>
             <Image src={'/kayano.jpg'} alt={product.name} width={300} height={450} />
@@ -13,10 +15,15 @@ export default function ShopPage() {
             </Link>
             <AddCart/>
         </section>
-    ))
+    )).slice(0,8)
   return (
-    <div  className="grid grid-cols-3 gap-4 w-5/6 m-auto">
+    <>
+    <div className="grid grid-cols-4 gap-4 w-5/6 m-auto">
         {productDetails}
     </div>
+    <div className="flex items-center justify-center py-6">
+        <Button title='View all products' shop ='/shop' style = "text-white bg-red-700 hover:text-red-700 hover:bg-white"/>
+    </div>
+    </>
   )
 }

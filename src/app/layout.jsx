@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import TopHeader from "./components/TopHeader";
 import TopHeaderTwo from "./components/TopHeader-Two";
+import { SidebarProviders } from "./providers";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,10 +27,12 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <TopHeader/>
-        <TopHeaderTwo/>
-        <Navbar/>
-        {children}
+        <SidebarProviders>
+            <TopHeader/>
+            <TopHeaderTwo/>
+            <Navbar/>
+            {children}
+        </SidebarProviders>
       </body>
     </html>
   );
