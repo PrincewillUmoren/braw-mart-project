@@ -3,6 +3,7 @@ import { products } from "./data"
 import AddCart from "./AddCart"
 import Button from "./Button"
 import Link from "next/link"
+import { Rating } from "@mui/material"
 
 export default function MartDetails() {
 
@@ -11,6 +12,7 @@ export default function MartDetails() {
             <Link href={`/shop/${product.name.replaceAll(' ','-')}`}>
             <Image src={'/kayano.jpg'} alt={product.name} width={300} height={450} />
             <h2>{product.name}</h2>
+            <Rating name="half-rating-read" defaultValue={product.rating} precision={0.1} readOnly />
             <p>&#8358;{(product.price).toLocaleString()}</p>
             </Link>
             <AddCart/>
