@@ -10,7 +10,7 @@ export default function MartDetails() {
     const productDetails =  products.sort((a,b) => b.price - a.price).map(product => (
         <section key={product.id} className="rounded-sm border-2 border-gray-500 flex flex-col space-y-4 items-center pb-4 text-center">
             <Link href={`/shop/${product.name.replaceAll(' ','-')}`}>
-            <Image src={'/kayano.jpg'} alt={product.name} width={300} height={450} />
+            <Image src={product.imageUrl} alt={product.name} width={300} height={450} className="w-[400px] h-[400px]"/>
             <h2>{product.name}</h2>
             <Rating name="half-rating-read" defaultValue={product.rating} precision={0.1} readOnly />
             <p>&#8358;{(product.price).toLocaleString()}</p>

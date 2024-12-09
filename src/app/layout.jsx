@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import TopHeader from "./components/TopHeader";
 import TopHeaderTwo from "./components/TopHeader-Two";
 import { SidebarProviders } from "./providers";
+import Footer from "./components/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,9 +30,11 @@ export default function RootLayout({ children }) {
       >
         <SidebarProviders>
             <TopHeader/>
-            <TopHeaderTwo/>
+            {/* <TopHeaderTwo/> */}
             <Navbar/>
             {children}
+
+            <Footer/>
         </SidebarProviders>
       </body>
     </html>
