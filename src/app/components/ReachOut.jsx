@@ -3,7 +3,6 @@ import { FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 
-
 export default function ReachOut() {
   return (
     <ul className="flex items-center space-x-6 text-lg px-10">

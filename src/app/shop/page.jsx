@@ -34,7 +34,7 @@ export default function ShopPage() {
             <Rating name="half-rating-read" defaultValue={product.rating} precision={0.1} readOnly/>
             <p>&#8358;{(product.price).toLocaleString()}</p>
             </Link>
-            <AddCart/>
+            <AddCart title={product.name} id={product.id} image={product.imageUrl} price={product.price} />
         </section>
     ))
   }
