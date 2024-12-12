@@ -1,9 +1,13 @@
+import AddCart from "@/app/components/AddCart"
 import { products } from "@/app/components/data"
 import { Rating } from "@mui/material"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function ProductDetailsPage({params}) {
     const productDesc = products.find(product => product.name.replaceAll(' ','-') == params.slug)
+
+    const relatedProducts = products.filter(product => (product.category == productDesc.category && product.name !== productDesc.name)|| (product.brand == productDesc.brand && product.name !== productDesc.name))
   return (
     <div>
 
@@ -35,7 +39,25 @@ export default function ProductDetailsPage({params}) {
             </ul>
           </div>
         </section>
-        <h1>Product Description Details</h1>
+        <section>
+
+        <h2 className="text-center bg-blue-900 my-6 text-white py-6 text-4xl">Related Products</h2>
+        <div className="grid grid-cols-3 gap-2">
+          {relatedProducts.map(product => (
+        <section key={product.id} className="rounded-sm border-2 border-gray-500 flex flex-col space-y-4 items-center pb-4 text-center">
+            <Link href={`/shop/${product.name.replaceAll(' ','-')}`}>
+            <Image src={product.imageUrl} alt={product.name} width={300} height={450}  className="w-[400px] h-[400px]"/>
+            <h2>{product.name}</h2>
+            <Rating name="half-rating-read" defaultValue={product.rating} precision={0.1} readOnly/>
+            <p>&#8358;{(product.price).toLocaleString()}</p>
+            </Link>
+            <AddCart title={product.name} id={product.id} image={product.imageUrl} price={product.price} />
+        </section>
+    ))
+          }
+        </div>
+
+        </section>
     </div>
   )
 }
