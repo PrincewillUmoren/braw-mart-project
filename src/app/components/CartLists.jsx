@@ -44,7 +44,7 @@ export default function CartLists() {
                 <div>
                 {cartItems.length == 0 ? (
 
-<h2 className="italic text-2xl font-bold">Cart is empty, add item to view cart</h2> 
+<h2 className="italic text-2xl font-bold pl-6">Cart is empty, add item to view cart</h2> 
 )
 : 
                         <table className="text-left m-auto capitalize w-4/5">
@@ -75,9 +75,16 @@ export default function CartLists() {
                                                 handle={(e) => handleValChange(e, index)}
                                                 />
                                         </td>
-                                        <td>{item.price * quantities[index]}</td>
+                                        <td>&#8358;{(item.price * quantities[index]).toLocaleString()}</td>
                                     </tr>
                                 ))}
+
+                                {/* <tfoot>
+                                    <tr >
+                                        <td className="font-bold pr-16">Total amount</td>
+                                        <td className="font-bold">&#8358;{cartItems.map(x=>x.price).reduce((total, item, index) => total + (item.price * quantities[index], 0)).toLocaleString()}</td>
+                                    </tr>
+                                </tfoot> */}
                             
                             </tbody>
                         </table>
