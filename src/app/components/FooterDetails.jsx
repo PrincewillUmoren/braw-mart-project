@@ -10,7 +10,7 @@ export default function FooterDetails() {
     <div className="grid grid-cols-[3fr_1fr_1fr_2fr] gap-x-5 text-[26px] px-8 py-10 bg-gray-100">
         <div className="text-gray-500 text-[24px] leading-9 px-4">
             <h2 className="text-2xl text-blue-900 capitalize py-4">Braw Mart</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae inventore repellat maiores sed odit saepe temporibus nihil delectus, expedita sunt? Minima, libero odio ad accusantium repudiandae animi molestias fuga beatae?</p>
+            <p>Braw Mart is a one-stop solution for all your shopping needs, offering a wide range of products including clothing, fashion items, home accessories, laptops, and more. When you think of Braw Mart, you think of quality, convenience, and the perfect blend of style and functionality.</p>
 
             <ul className="flex items-center space-x-4">
                 <li className="rounded-full border-2 border-gray-400 p-4">
@@ -45,11 +45,11 @@ export default function FooterDetails() {
         </div>
         <div>
             <h2 className="text-2xl text-blue-900 capitalize py-4">contact details</h2>
-            <address>Lorem ipsum dolor sit amet curi? Voluptatum, praesentium nulla?</address>
+            <address>Harmony Estate Lagos Nigeria</address>
             <aside>
                 <h3 className="text-2xl text-blue-900 capitalize py-4">contact addresses</h3>
                 <p><Link href="tel:+2348149068280">+2348149068280</Link></p>
-                <p><Link href="mailto:info@brawmart.com">braw mart</Link></p>
+                <p><Link href="mailto:info@brawmart.com">Braw Mart</Link></p>
             </aside>
         </div>
     </div>
